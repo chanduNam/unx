@@ -427,3 +427,11 @@ find . -type f -exec ls -s {} \; | sort -n  | head -5 -> Finding the Top 5 small
 find . -type f -name ".*" -> find all the hidden files.
 find -type d -name ".*" ->  find all the hidden direcotories.
 find / -type f -name *.zip -size +100M -exec rm -i {} \;"
+========================================
+rpm command examples
+1. rpm -ivh httpd-2.2.3-22.0.1.el5.i386.rpm ->  nstall apache using rpm.
+2.rpm -uvh httpd-2.2.3-22.0.1.el5.i386.rpm-> updtae command
+3.rpm -ev httpd -> remove/unstall the rpm
+4. rpm -qa -> print all installed rpm 
+5.rpm -qa | grep 'cdrecord'
+6.rpm -q MySQL-client-> query a perticular rpm/package
