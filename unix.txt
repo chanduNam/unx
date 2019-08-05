@@ -411,3 +411,19 @@ out put:
 Hi there
 Hi there
 $myvar
+
+===============
+find -maxdepth 2 -name sample.sh # find the file sample.sh in depthleve two. (ie root and other next directory)
+find -mindepth 3 -maxdepth 5 -name passwd 
+ls -i1 test* -> i option gives inode no of all test* files
+using i node we can find the files with same no as well as samfile name containing space end of the file
+find . -perm -g=r -type f -exec ls -l {} \; -> find the files which has read permission to group
+find . -perm 040 -type f -exec ls -l {} \; ->  find the files which has read permission to group 
+find ~ -empty -> find all empty files in home directory
+find . -maxdepth 1 -empty  ->List all the empty files only in your home directory.
+find . -maxdepth 1 -empty -not -name ".*" ->List only the non-hidden empty files only in the current directory.
+find . -type f -exec ls -s {} \; | sort -n -r | head -5  ->Finding the Top 5 Big Files
+find . -type f -exec ls -s {} \; | sort -n  | head -5 -> Finding the Top 5 small Files
+find . -type f -name ".*" -> find all the hidden files.
+find -type d -name ".*" ->  find all the hidden direcotories.
+find / -type f -name *.zip -size +100M -exec rm -i {} \;"
