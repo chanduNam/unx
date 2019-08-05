@@ -1,0 +1,413 @@
+i   Start inserting from the current character.
+I    Insert text at the beginning of the line
+a   Start inserting from the next character.
+A   Insert text at the end of the line
+o   Start inserting from a new line below.
+O   Start inserting from a new line above.
+x   Delete the character where the cursor is.
+dd  Delete the line where the cursor is.
+r   Replace the character where the cursor is.
+ZZ  Save changes and quit
+/  text Search for a text string.
+:s/old/new/g   Replace (substitute) a text string with a new string.
+yy  copy the current line
+p   Paste a copied line after the current cursor.
+P  Paste a copied line above the current cursor.
+:wq Save and quit.
+:q  Exit and discard changes.
+cd - moves to previous directory/path
+
+grep 'oracle database' test.txt
+In order to output all lines in the test.txt file that don’t contain the expression “oracle database”,
+you use the grep command with the -v option, as shown here:
+grep -v 'oracle database' test.txt (exp:   grep -v 'and' test.txt)
+In addition to the -v option, you can use the grep command with several other options:
+-c: Prints a count of matching lines for each input file
+-l: Prints the name of each input file
+-n: Supplies the line number for each line of output (exp: grep -n nix file.txt)
+-i: Ignores the case of the letters in the expression
+
+
+;(semicolon): is the command seperator.
+\(back slash) :Continues a Command
+sleep 4(seconds) : this commad used to delay the output 
+exp: sleep 10 ; cat Demo.txt
+h Move a character to the left.
+l Move a character to the right.
+j Move a line down.
+k Move a line up.
+w Go to the beginning of the next word.
+b Go to the beginning of the previous word.
+$ Go to the end of the current line ( same like I command but $ command goest to the 
+(the end of the line but the curesor will not be Instert mode ,whereas I comamd do).
+0(zero) Move to the beginning of the line(cursor- non-Intsert mode)
+^ Go to the start of the current line.
+G Go to the end of the file.
+:1(numberic 1) Go to the top of the file.
+e  move forward to end of word 
+tilde (~) : this command chages the case of current character
+ex: 5~ changes case of 5 character
+
+
+
+Searching: 
+
+n = repeat last search 
+N = reverse direction of last search 
+/pat = move cursor to next occurrance of pattern pat (forward search) 
+?pat = move cursor to previous occurrance of pattern pat (backward search) 
+
+^H = erase last character (usually same as backspace) 
+dSPACE = delete the character beneath the cursor (SPACE == space bar) 
+dw = delete rest of current word 
+d$ = delete from cursor through end of current line 
+dd = delete current line 
+#dd = delete # lines (Ex: 3dd deletes the current line and the two following lines.) 
+
+xp : this command will swap the character 
+ddp : this command will swap the two lines
+Deleting: 
+
+^H = erase last character (usually same as backspace) 
+dSPACE = delete the character beneath the cursor (SPACE == space bar) 
+dw = delete rest of current word 
+d$ = delete from cursor through end of current line 
+dd = delete current line 
+#dd = delete # lines (Ex: 3dd deletes the current line and the two following lines.) 
+d3w : Deletes to end of third word
+db : Deletes from beginning of word
+dW :Deletes to end of blank-delimited word
+
+dB Deletes from beginning of blank-delimited word
+d7B Deletes from seventh previous beginning of blank-delimited word
+d) Deletes to end of sentence
+d4) Deletes to end of fourth sentence
+d( Deletes from beginning of sentence
+d} Deletes to end of paragraph
+d{ Deletes from beginning of paragraph
+d7{ Deletes from seventh paragraph preceding beginning of paragraph
+d/text Deletes up to next occurrence of word text
+dfc Deletes on current line up to and including next occurrence of character c
+dtc Deletes on current line up to next occurrence of c
+D Deletes to end of line
+d$ Deletes to end of line
+dd Deletes current line
+5dd Deletes five lines starting with current line
+dL Deletes through last line on screen
+dH Deletes from first line on screen
+dG Deletes through end of Work buffer
+d1G Deletes from beginning of Work buffer
+
+vim filename :Edits filename starting at line 1
+vim +n :filename Edits filename starting at line n
+vim + :filename Edits filename starting at the last line
+vim +/pattern filename :Edits filename starting at the first line containing pattern
+vim –r filename :Recovers filename after a system crash
+vim –R filename: Edits filename readonly (same as opening the file with view)
+
+CONTROL-D Forward one-half window
+CONTROL-U Backward one-half window
+CONTROL-F or
+PAGE DOWN
+Forward one window
+CONTROL-B or
+PAGE UP
+Backward one window
+nG To line n (without n, to the last line)
+H To top of window
+M To middle of window
+L To bottom of window
+
+nx :Deletes the number of characters specified by n, starting with the current
+character
+nX :Deletes n characters before the current character, starting with the character
+preceding the current character
+dM :Deletes text specified by M
+ndd: Deletes n lines
+dtc :Deletes to the next character c on the current line
+D :Deletes to end of the line
+n~ :Changes case of the next n characters
+
+f	move forward one screen
+b	move backward one screen
+d	move down (forward) one half screen
+u	move up (back) one half screen
+l	redraws the screen
+r	redraws the screen, removing deleted lines
+
+1G	 Moves to the first line of the file
+3G	 Moves to the third line of the file
+:n	 Moves to the nth line of the file (exp-  :5 moves the cursor to 5th line)
+M	Moves to the middle of the screen
+L	Move to the bottom of the screen
+
+
+) End of sentence
+( Beginning of sentence
+} End of paragraph
+{ Beginning of paragraph
+% Move to matching brace of same type at same nesting level
+
+ls −l|grep “^d” => lists only Direcgtories
+
+grep −c “pattern” <file> => Gives matching pattern count
+ex: grep -c "nos" OperatDemo
+
+head −<n> file.txt | tail −1 => Displays nth line of the file
+
+ex: head −5 file.txt | tail −1
+
+
+
+CTRL+d Moves forward 1/2 screen
+CTRL+f Moves forward one full screen
+CTRL+u Moves backward 1/2 screen
+CTRL+b Moves backward one full screen
+CTRL+e Moves the screen up one line
+CTRL+y Moves the screen down one line
+CTRL+u Moves the screen up 1/2 page
+CTRL+d Moves the screen down 1/2 page
+CTRL+b Moves the screen up one page
+CTRL+f Moves the screen down one page
+CTRL+I Redraws the screen
+ ~     Switches the case of the character under the cursor.
+ J Joins the current line with the next one. A count joins that many lines.
+:f Displays the current position in the file in % and the file name, the total
+number of file.
+
+:f filename Renames the current file to filename.
+:w filename Writes to file filename.
+:e filename Opens another file with filename.
+
+ls -a :Displys hidden files
+:set nm :- This command used to display the line numbers in vi mode
+ cat -n =: displays line no's of the file. (ex: cat -n Demo.txt)
+sed -n 3p Demo.txt =: To just print 3rd line use the sed command:
+sed -n -e 1p -e 3p Demo.txt =: To just print 1st and 3rd line use the sed command:
+ sed -n 1,3p Demo.txt=:To see specific range, say show lines between 1 to 3, run:
+# symbol is called a hash, and the ! symbol is called a bang.
+
+find and replace command
+sed 's/row/data/g' Demo.txt
+
+s- find ,g -replace
+
+
+Alias:-
+----------
+ alias chandu="ls"
+
+Shell Scripting.
+=================
+in shellScript the first line should be #!/bin/bash. this means shell can read all the commands provided by the user.
+# symbol is called a hash, and the ! symbol is called a bang.
+
+Varibles: In Unix Shell , Variables can contain only (a to z or A to Z), (0,9), AND _ . 
+if you are using any other special charector then the variable becomes INVALID,Since all othe special charectors have special meaning in shell scripting.
+
+Valid Variables:
+_NAME
+NAME1
+NAME_4,
+SurnName
+
+Invalid Variables.
+
+3NAME : Variable name should not start with A number.
+
+read variable reads the valued intered in command line.
+
+exple : read NAME.
+
+read only Variable
+---------------------
+A variable marked as readonly then its value cannot be changed.
+
+==========================================
+
+-d file    Test if file is a directory
+-e file    Test if file exists
+-f file    Test if file is an ordinary file
+-r file    Test if file is readable
+-w file    Test if file is writable
+-x file    Test if file is executable
+
+=====================================
+( ) :Subshell (page 284)
+$( ) :Command substitution 
+(( )): Arithmetic evaluation;
+$(( )): Arithmetic expansion (not for use with an enclosed equal sign)
+[ ] :The test command (pages 399, 401, and 854)
+[[ ]]: Conditional expression; similar to [ ] but adds string comparisons 
+
+ echo ~ : displays home directory 
+  wc -l Demo.txt
+====================================
+Operator	Meaning
+< filename: Redirects standard input from filename.
+> filename :Redirects standard output to filename unless filename exists and noclobber
+(page 129) :is set. If noclobber is not set, this redirection creates filename if it
+does not exist and overwrites it if it does exist.
+>| :filename Redirects standard output to filename, even if the file exists and noclobber
+(page 129) is set.
+>> :filename Redirects and appends standard output to filename unless filename exists and
+noclobber (page 129) is set. If noclobber is not set, this redirection creates
+filename if it does not exist.
+&> :filename Redirects standard output and standard error to filename.
+<&m :Duplicates standard input from file descriptor m 
+[n] >&m: Duplicates standard output or file descriptor n if specified from file descriptor
+m (page 432).
+[n]<&– :Closes standard input or file descriptor n if specified 
+[n] >&–: Closes standard output or file descriptor n if specified.
+===================================
+sort myfile.txt | uniq
+
+List only the unique lines: sort myfile.txt | uniq -u
+
+List only the duplicate lines: sort myfile.txt | uniq -d
+
+Get a count of the number of lines by adding the -c option
+
+============================================================
+
+=>all user commands are in /bin and /usr/bin or /usr/local/bin directories.
+
+=>You can also find out of path of any command with which or whereis commands:
+
+$ which ls
+/bin/ls
+==================================
+
+write: commad Sends a Message
+---------------------------
+The write utility sends a message to another user who is logged in. When you and
+another user use write to send messages to each other, you establish two-way communication.
+Initially a write command displays a banner on the other user’s terminal,
+saying that you are about to send a message
+
+
+exp : 
+
+[SIR14486@APDCL24 ~]$ write SIR12607
+write: SIR12607 is logged in more than once; writing to pts/18
+HI
+
+==================================================================
+mesg: command -Denies or Accepts Messages
+By default, messages to your screen are blocked. Give the following mesg command
+to allow other users to send you messages:
+$ mesg y
+
+ mesg n:You can block messages by entering mesg n. Give the command mesg by itself to display
+is y (for “yes, messages are allowed”) or is n (for “no, messages are not allowed”).
+If you have messages blocked and you write to another user, write displays the following
+message because, even if you are allowed to write to another user, the user
+will not be able to respond to you:
+$ write max
+write: write: you have write permission turned off.
+
+=========================
+Redirecting Standard Output
+------------------------------
+The redirect output symbol (>) instructs the shell to redirect the output of a command
+to the specified file
+
+bash-3.00$ cat > Ctrl.sh
+#!/usr/bin/bash
+if [ -f test.txt ]
+then
+echo 'yes its a file'
+else
+echo 'its not a file'
+
+Press CONTROL-D to signal the end of file
+
+now cat  Ctrl.sh displays the content of te file
+
+bash-3.00$ cat Ctrl.sh
+#!/usr/bin/bash
+if [ -f test.txt ]
+then
+echo 'yes its a file'
+else
+echo 'its not a file'
+fi
+
+=============================
+noclobber -  this command will prevent to override a existing file
+
+there two options one is to prevent(disable overriding) the file  to be overriden
+two is allow the shell to override a file(enalbe overrding)
+
+
+1)set -o noclobber -disalbe
+2)set +o noclobber-enable
+
+
+=========================================
+Shell Variables
+----------------
+
+A variable name must start with a letter or underscore, not with a number.
+ex: name_is_1='chandu'
+There can be no whitespace on either side of the equal sign (=)
+
+readonly : Makes the Value of a Variable Permanent
+ex:name='chandu'
+   readonly name
+Quoting the $
+-------------------
+You can prevent the shell from substituting the value of a variable by quoting the
+leading $. Double quotation marks do not prevent the substitution; single quotation
+marks or a backslash (\) do.
+$ echo $person
+max
+$ echo "$person"
+max
+$ echo '$person'
+$person
+$ echo \$person
+$person
+
+
+--------------------------------------
+. ls -a > FileLilst.txt
+this command saves the output to FileList.txt
+
+
+
+Stream Redirection
+Linux includes redirection commands for each stream. These commands write standard output to a file. If a non-existent file is targetted (either by a single-bracket or double-bracket command), a new file with that name will be created prior to writing.
+
+Commands with a single bracket overwrite the destination's existing contents.
+
+Overwrite
+
+> - standard output -ex : ls -a > FileLilst.txt
+< - standard input   -ex: cat < test.txt
+2> - standard error -ex : ls-ltr 2> error.txt
+
+Commands with a double bracket do not overwrite the destination's existing contents.
+
+Append
+
+>> - standard output
+<< - standard input
+2>> - standard error
+
+env   : commands gives environment details.
+==============================================
+
+The behavior of variables such as $foo inside quotes depends on the type of quotes you use. If you enclose a $
+variable expression in double quotes, it's replaced with its value when the line is executed. If you enclose it in
+single quotes, no substitution takes place
+
+myvar="Hi there"
+echo $myvar
+echo "$myvar"
+echo '$myvar'
+
+out put: 
+Hi there
+Hi there
+$myvar
