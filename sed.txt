@@ -1,0 +1,23 @@
+sed -n 22,29p testfile.txt -> Print line 22 and 29, -n is for surpressing dublicate line, and p is for print
+sed 22,29d testfile.txt -> display all the files except line 22,29  d for deleting the files.
+sed -n '2-3p' file.txt -> display every 3rd line starting from 2nd line.
+sed -$d file.txt -> delete last line ( $ indicates last line , and ^ indicates first line
+sed '2-4d' testfile.txt -> delete lines files starting from line 2 to 4.
+sed '29-34!d' testfile.txt -> delete lines other than mentioned.
+sed G testfile.txt -> insert empty line  after each line.
+sed 's/danger/safety/' testfile.txt -> search for 'danger' and replace with  'safety' in first occurance
+sed 's/danger/safety/g' testfile.txt > replace the string globally(all accurance).
+sed 's/danger/safety/2' testfile.txt ->replace the string @second accurance
+sed 's/danger/safety/2g' testfile.txt
+sed '/danger/a "This is new line with text after match"' testfile.txt -> add the line after every match 
+sed '/danger/i "This is new line with text after match"' testfile.txt -> add the lin before every match
+sed '/danger/c "This will be the new line" ' testfile.txt -> Change a whole line with matched pattern
+sed -e 's/danger/safety/g' -e 's/hate/love/' testfile.txt -> running multiple sed commands
+sed -i.bak -e 's/danger/safety/g'  testfile.txt -> Making a backup copy before editing a file
+sed -e 's/#.*//' testfile.txt ->  remove  all the commented file.
+ sed -e 's/#.*//;/^$/d' testfile.txt -> remove commented lines and empty lines.
+ sed 's/\([^:]*\).*/\1/' /etc/passwd
+ sed '2,$ s/unix/linux/' geekfile.txt -> replace the string from 2nd line to the end of the file.
+ sed '5d' filename.txt -> delete 5th line
+ sed '/pattern/d' filename.txt -> delete the pattern matched line.
+ 
