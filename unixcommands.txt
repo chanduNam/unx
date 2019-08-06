@@ -435,3 +435,5 @@ rpm command examples
 4. rpm -qa -> print all installed rpm 
 5.rpm -qa | grep 'cdrecord'
 6.rpm -q MySQL-client-> query a perticular rpm/package
+========================================================
+read -s "enter your name: name -> here s option hides the content typed.
