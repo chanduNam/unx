@@ -436,4 +436,6 @@ rpm command examples
 5.rpm -qa | grep 'cdrecord'
 6.rpm -q MySQL-client-> query a perticular rpm/package
 ========================================================
-read -s "enter your name: name -> here s option hides the content typed.
+read -p " p options to promprt the text"
+read -s " s for hiding the text typed
+read -n3 -p " here 3 means allow only 3 charectors to  type.
