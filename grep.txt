@@ -1,3 +1,4 @@
+this document is used to decribe about grep utility
 grep "error" sample.txt -> gives all the lines which are matching the string pattern.
 grep -r "hello" * -> check for given string in multiple lines
 grep -i "case" sample.txt ->  find the given string with case insensitive.
@@ -11,3 +12,4 @@ grep -c "count" sample.txt -> display count of matching the  pattern/word
 grep -c -v "nomatch" sample.txt display the lines which are not matching the pattern.
 grep -l "files" sample* -> display all the file names which are mathcing the pattern.
 grep -n "go" demo_text -> show line no for matching line.
+
